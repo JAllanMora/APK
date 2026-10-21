@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "buildId": null,
+  "templateId": "base",
+  "app": {
+    "name": "Plantilla base",
+    "androidPackage": "com.apkgen.dev.base",
+    "versionCode": 1,
+    "versionName": "1.0.1"
+  },
+  "content": {
+    "businessName": "Mi Negocio",
+    "address": "Calle Principal 123",
+    "phone": "+52 55 0000 0000",
+    "headline": "Bienvenido a nuestra app"
+  },
+  "theme": {
+    "primaryColor": "#1E88E5",
+    "secondaryColor": "#FFC107",
+    "backgroundColor": "#FFFFFF"
+  },
+  "assets": {
+    "icon": null,
+    "splash": null
+  }
+}
