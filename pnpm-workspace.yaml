@@ -1,0 +1,5 @@
+# Las plantillas Expo (templates/*) quedan FUERA del workspace a propósito:
+# cada una es un proyecto npm independiente que EAS compila por separado.
+packages:
+  - "apps/*"
+  - "packages/*"
