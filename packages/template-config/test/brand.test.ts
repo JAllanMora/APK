@@ -1,3 +1,5 @@
+import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
   appRequestInputSchema,
@@ -70,10 +72,8 @@ describe("appRequestInputSchema", () => {
 });
 
 describe("plantillas del repo", () => {
-  it("cada templates/*/brand.json cumple el contrato", async () => {
-    const { readdirSync, readFileSync, existsSync } = await import("node:fs");
-    const { join } = await import("node:path");
-    const root = join(__dirname, "../../../templates");
+  it("cada templates/*/brand.json cumple el contrato", () => {
+    const root = join(import.meta.dirname, "../../../templates");
     const dirs = readdirSync(root, { withFileTypes: true }).filter((d) => d.isDirectory());
     expect(dirs.length).toBeGreaterThan(0);
     for (const dir of dirs) {
